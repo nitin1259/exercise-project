@@ -1,0 +1,22 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: nginx-pathprobe
+  namespace: ckad-ns3
+  labels:
+    name: nginx-pathprobe
+spec:
+  containers:
+    - name: nginx-pathprobe
+      image: nginx
+      readinessProbe:
+        initialDelaySeconds: 60
+        periodSeconds: 60
+        exec:
+          command: ["ls", "/var/"]
+      resources:
+        limits:
+          memory: "128Mi"
+          cpu: "500m"
+      ports:
+        - containerPort: 80
