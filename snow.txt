@@ -1,7 +1,10 @@
 defineNS(“now.global.constants.pi”, 3.14);console.log(now.global.constants.pi)
 
+
 function Counter() {    var conditon = true/false;     if (conditon) {       console.log("called as a function");      } else {         console.log("called as a constructor");      } }new Counter()Counter()
 
+
+// what is the design pattern seen in below code
 function USD(){ } 
 function EURO(){ } 
 var Money = {getCurrency:function(type){ console.log(type) }};
@@ -21,3 +24,6 @@ console.log(euro instanceOf EURO) ==> true
 var btn = $("#delete-grid"); 
 var  grid= $("#large-grid"); 
 btn.on("click", function(){  grid.remove();});
+
+
+// progressive bar custum implementation
