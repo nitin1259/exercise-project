@@ -9,11 +9,23 @@ type Person struct { //public
 	salary float64
 }
 
-func (p Person) raiseSalary(bonus float64) { //private method
-	p.salary += bonus
+// Manager struct
+type Manager struct {
+	Person     // embedding an nameless Person here
+	department string
 }
 
-// PrintInFormat - format printing
-func (p Person) PrintInFormat() string { // public method
-	return fmt.Sprintf("Name: %s, Age: %d, Salary: %.2f", p.name, p.age, p.salary)
+func (p Person) printPersonNameMethod() {
+	fmt.Println("Name: ", p.name)
+}
+
+func printNameFunction(p Person) {
+	fmt.Println("Name: ", p.name)
+}
+
+func main() {
+	m := Manager{Person{"Techo-Neo", 21, 35000}, "Finance"}
+	fmt.Println(m.name)         // prints-  Techo-Neo
+	printNameFunction(m.Person) // prints - Name:  Techo-Neo
+	m.printPersonNameMethod()   // prints - Name:  Techo-Neo
 }
