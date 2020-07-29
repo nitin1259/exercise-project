@@ -2,6 +2,11 @@ package main
 
 import "fmt"
 
+// Role interface for ploymorphism
+type Role interface {
+	roleName()
+}
+
 // Person struct for holding person details
 type Person struct { //public
 	name   string
@@ -9,23 +14,13 @@ type Person struct { //public
 	salary float64
 }
 
-// Manager struct
-type Manager struct {
-	Person     // embedding an nameless Person here
-	department string
+func (p Person) roleName() {
+	fmt.Println("Generic Person role Name")
 }
-
-func (p Person) printPersonNameMethod() {
-	fmt.Println("Name: ", p.name)
+func printRoleName(r Role) {
+	r.roleName()
 }
-
-func printNameFunction(p Person) {
-	fmt.Println("Name: ", p.name)
-}
-
 func main() {
-	m := Manager{Person{"Techo-Neo", 21, 35000}, "Finance"}
-	fmt.Println(m.name)         // prints-  Techo-Neo
-	printNameFunction(m.Person) // prints - Name:  Techo-Neo
-	m.printPersonNameMethod()   // prints - Name:  Techo-Neo
+	p1 := Person{"Techo-Neo", 23, 45000}
+	printRoleName(p1)
 }
