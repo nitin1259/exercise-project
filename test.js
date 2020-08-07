@@ -41,11 +41,21 @@
 // }
 
 // 5 * 5;
-function getsquare(n) {
-  let ret = 0;
-  for (let i = 1; i <= n; i++) {
-    ret += n;
-  }
+// function getsquare(n) {
+//   let ret = 0;
+//   for (let i = 1; i <= n; i++) {
+//     ret += n;
+//   }
 
-  return ret;
+//   return ret;
+// }
+
+for (var i = 1; i < 5; i++) {
+  doprint(i);
+}
+
+function doprint(j) {
+  setTimeout(() => {
+    console.log(j);
+  }, 1000);
 }
