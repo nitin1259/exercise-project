@@ -59,3 +59,31 @@ function doprint(j) {
     console.log(j);
   }, 1000);
 }
+// -----------
+// make even one side and odd one side of array
+
+// var a = [8, 1, 5, 3, 4, 7, 6];
+// var a = [4, 2, 1, 5, 8, 3, 4, 7, 6];
+// var a = [8, 1, 5, 3, 4, 7, 6];
+
+var a = [2, 4, 6, 8, 1, 10, 3, 12, 7];
+console.log(a);
+
+// [2,1,5,3,4,7,6]
+
+// odd i = 1
+// even i = 1
+
+// let evenInd = 0;
+let oddInd = 0;
+for (let i = 0; i < a.length; i++) {
+  if (a[i] % 2 == 0) {
+    temp = a[oddInd];
+    a[oddInd] = a[i];
+    a[i] = temp;
+
+    oddInd++;
+  }
+}
+
+console.log(a);
