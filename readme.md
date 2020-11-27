@@ -2,7 +2,7 @@
 
 ## The challenge
 
-The objective is to build a single interactive page to display a list of top 10 voted `Posts` and their associated `Comments`.
+Objective is to build a single interactive page to display a list of top 10 voted `Posts` and their associated `Comments`.
 
 ![Sample](./example.png)
 
