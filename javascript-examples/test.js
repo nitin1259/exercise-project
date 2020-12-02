@@ -59,7 +59,7 @@ function doprint(j) {
     console.log(j);
   }, 1000);
 }
-// -----------
+// ----------- this as been asked in XAMPR
 // make even one side and odd one side of array
 
 // var a = [8, 1, 5, 3, 4, 7, 6];
