@@ -32,3 +32,6 @@ var a = multiply(2)(3)(4)(5)(6);
 var b = multiply(2)(3)(4)(5);
 var c = multiply(2)(3)(4);
 console.log(a, b, c);
+
+
+// write code for multiply function.
