@@ -87,3 +87,38 @@ for (let i = 0; i < a.length; i++) {
 }
 
 console.log(a);
+
+
+// new exapmles test
+var obj = {
+  name: "puneet",
+  toString: function () {
+    return this.name;
+  },
+};
+console.log("hey my name is: " + obj);
+
+//
+
+var hero = {
+  _name: "Puneet",
+  getSecretIdentity: function () {
+    return this._name;
+  },
+};
+var stoleSecretIdentity = hero.getSecretIdentity;
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+
+//
+
+var hero = {
+  _name: "Puneet",
+  getSecretIdentity: () => {
+    return this._name;
+  },
+};
+var stoleSecretIdentity = hero.getSecretIdentity;
+console.log(stoleSecretIdentity());
+console.log(hero.getSecretIdentity());
+
