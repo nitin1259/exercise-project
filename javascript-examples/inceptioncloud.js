@@ -93,38 +93,6 @@ Graph.Node.prototype.dependency = fucntion (destination){
     this.depenMap[this] = destination
   
 }
-
-
-
-
-var findCircularDependency = fucntion(head, graph, arr){
-  
-  
-  
-  if (head.depenMap){
-    
-      dest = head.depenMap[head]
-      
-      
-      const val = arr.find(des => des.equals(dest))
-      
-      if !val {
-          arr.push(dest)
-        findCircularDependency(dep, graph, arr)
-      }
-      else{
-        return "circular dependency"
-      }
-      }
-      
-  }
-    
-    
-    
-Graph.visitor.Dfs = fucntion(graph, src, ){
-  
-    
-}
     
 
 /**
